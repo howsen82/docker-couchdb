@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  couchdb:
+    container_name: couchdb
+    image: couchdb:latest
+    hostname: couchdb
+    network_mode: host
+    environment:
+      - COUCHDB_USER=user
+      - COUCHDB_PASSWORD=password
+    restart: unless-stopped
+
+# http://127.0.0.1:5984/_utils/
